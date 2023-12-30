@@ -49,6 +49,9 @@ export default {
     height: 50px;
     margin-right: 10px;
     margin-bottom: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 </style>
