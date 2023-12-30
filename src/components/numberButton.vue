@@ -23,6 +23,12 @@ export default {
                 useCalcStore().resetLast()
                 return
             }
+            if (this.number.toString() === 'radice') {
+                return
+            }
+            if (this.number.toString() === '%') {
+                return
+            }
             if (this.number.toString() === '=') {
 
                 useCalcStore().printStoreValues()
