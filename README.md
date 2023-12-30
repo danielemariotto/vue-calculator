@@ -4,6 +4,12 @@ Similar Result:
 
 actual result is on: https://uncountabledestiny.github.io/vue-calculator/
 
+NEXT FEATURES
+- [ ] RADICE
+- [ ] %
+- [ ] CE
+- [ ] reset after result, on new number click 
+- [ ] improve design
 
 
 =============================================================
