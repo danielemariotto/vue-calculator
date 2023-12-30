@@ -1,4 +1,12 @@
 # vue-calculator
+Similar Result: 
+![Result](model.jpg)
+
+actual result is on: https://uncountabledestiny.github.io/vue-calculator/
+
+
+
+=============================================================
 
 This template should help get you started developing with Vue 3 in Vite.
 
