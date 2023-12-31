@@ -5,7 +5,7 @@ Similar Result:
 actual result is on: https://uncountabledestiny.github.io/vue-calculator/
 
 NEXT FEATURES
-- [ ] RADICE
+- [x] RADICE
 - [ ] %
 - [ ] CE
 - [ ] reset after result, on new number click 

@@ -42,6 +42,10 @@ export const useCalcStore = defineStore('calc', () => {
       result = parseFloat(prevFigureShown.value) * parseFloat(figureShown.value)
       figureShown.value = result.toString()
     }
+    else if (operation.value === '√') {
+      result = Math.sqrt(parseFloat(prevFigureShown.value))
+      figureShown.value = result.toString()
+    }
   }
 function printStoreValues(){
   console.log(figureShown.value, prevFigureShown.value, operation.value);
@@ -49,5 +53,4 @@ function printStoreValues(){
 }
   return { figureShown, prevFigureShown, operation, addDigit, savePrevFigure, resetLast, resetAll, setOperation, getResult, printStoreValues }
 })
-
 

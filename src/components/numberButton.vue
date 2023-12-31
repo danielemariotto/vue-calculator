@@ -23,7 +23,10 @@ export default {
                 useCalcStore().resetLast()
                 return
             }
-            if (this.number.toString() === 'radice') {
+            if (this.number.toString() === '√') {
+                useCalcStore().savePrevFigure()
+                useCalcStore().setOperation(this.number.toString())
+                useCalcStore().getResult()
                 return
             }
             if (this.number.toString() === '%') {
