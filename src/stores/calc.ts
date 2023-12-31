@@ -3,7 +3,8 @@ import { defineStore } from 'pinia'
 
 export const useCalcStore = defineStore('calc', () => {
   const figureShown = ref('')
-  const prevFigureShown = ref('0')
+  const prevFigureShown = ref('')
+  const secondPrevFigureShown = ref('')
   const operation = ref('')
   // const doubleCount = computed(() => count.value * 2)
   function addDigit(lastFigure: string) {
@@ -14,10 +15,11 @@ export const useCalcStore = defineStore('calc', () => {
   }
   function resetLast() {
     figureShown.value = ''
+
   }
   function resetAll() {
     figureShown.value = ''
-    prevFigureShown.value = '0'
+    prevFigureShown.value = ''
     operation.value = ''
   }
 
@@ -26,6 +28,7 @@ export const useCalcStore = defineStore('calc', () => {
   }
   function getResult() {
     let result = 0
+    secondPrevFigureShown.value = figureShown.value
     if (operation.value === '-') {
       result = parseFloat(prevFigureShown.value) - parseFloat(figureShown.value)
       figureShown.value = result.toString()
@@ -55,6 +58,6 @@ function printStoreValues(){
   console.log(figureShown.value, prevFigureShown.value, operation.value);
 
 }
-  return { figureShown, prevFigureShown, operation, addDigit, savePrevFigure, resetLast, resetAll, setOperation, getResult, printStoreValues }
+  return { figureShown, prevFigureShown, operation, secondPrevFigureShown, addDigit, savePrevFigure, resetLast, resetAll, setOperation, getResult, printStoreValues }
 })
 

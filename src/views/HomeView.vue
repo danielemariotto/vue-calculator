@@ -21,6 +21,11 @@ export default {
         return ''
       }
       else {return res}
+    },
+    prevResult(){
+      let res = useCalcStore().prevFigureShown + ' ' + useCalcStore().operation + ' ' +  useCalcStore().secondPrevFigureShown
+      if (useCalcStore().operation === '%') res = ''// temporary
+      return res
     }
   },
 }
@@ -29,6 +34,7 @@ export default {
 <template>
   <div class="calc">
     <div class="title">Calculator</div>
+    <div class="prevResult"> {{prevResult}} </div>
     <div class="result">{{ result }}</div>
     <div v-for="line in buttonsList" :key="line" class="line">
       <div v-for="number in line" :key="number">
@@ -61,7 +67,10 @@ export default {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.prevResult{
+  text-align: right;
 
+}
 .line {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
