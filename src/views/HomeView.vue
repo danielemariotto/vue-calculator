@@ -15,7 +15,12 @@ export default {
   },
   computed: {
     result() {
-      return useCalcStore().figureShown
+      const res = useCalcStore().figureShown
+      if (res.includes('NaN')) {
+        useCalcStore().resetAll()
+        return ''
+      }
+      else {return res}
     }
   },
 }
@@ -65,4 +70,5 @@ export default {
 
 .button {
   width: 50px;
-}</style>
+}
+</style>

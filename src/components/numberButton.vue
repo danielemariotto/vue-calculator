@@ -23,13 +23,10 @@ export default {
                 useCalcStore().resetLast()
                 return
             }
-            if (this.number.toString() === '√') {
+            if (this.number.toString() === '√' || this.number.toString() === '%') {
                 useCalcStore().savePrevFigure()
                 useCalcStore().setOperation(this.number.toString())
                 useCalcStore().getResult()
-                return
-            }
-            if (this.number.toString() === '%') {
                 return
             }
             if (this.number.toString() === '=') {
