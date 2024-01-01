@@ -6,10 +6,11 @@ actual result is on: https://uncountabledestiny.github.io/vue-calculator/
 
 NEXT FEATURES
 - [x] RADICE
-- [x] %
-- [ ] CE
-- [ ] reset after result, on new number click 
-- [ ] improve design
+- [x] % (simple divide per 100)
+- [x] CE
+- [x] make behaviour similar to windows calc
+- [x] reset after result, on new number click 
+- [x] improve design
 
 
 =============================================================

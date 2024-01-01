@@ -24,7 +24,7 @@ export default {
     },
     prevResult(){
       let res = useCalcStore().prevFigureShown + ' ' + useCalcStore().operation + ' ' +  useCalcStore().secondPrevFigureShown
-      if (useCalcStore().operation === '%') res = ''// temporary
+      if (useCalcStore().operation === '%') res = this.result
       return res
     }
   },
@@ -36,6 +36,7 @@ export default {
     <div class="title">Calculator</div>
     <div class="prevResult"> {{prevResult}} </div>
     <div class="result">{{ result }}</div>
+    <div></div>
     <div v-for="line in buttonsList" :key="line" class="line">
       <div v-for="number in line" :key="number">
 
@@ -46,29 +47,45 @@ export default {
 </template>
 
 <style scoped>
+body{
+}
 .calc {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 3px green;
+  border: 10px solid green;
   scale: 1.5;
+  background-color: green;
+  padding: 0 10px 0 10px;
+  font-size: 23px;
+
 }
 
 .title {
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .result {
   text-align: right;
-  width: 230px;
+  width: 210px;
   height: 25px;
-  background-color: greenyellow;
+  background-color: black;
+  color: white;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 10px;
 }
 .prevResult{
   text-align: right;
+  background-color: greenyellow;
+  padding: 5px;
+  margin-left: 2px;
+  margin-right: 1px;
+  height: 20px;
+  font-size: 15px;
+
 
 }
 .line {
