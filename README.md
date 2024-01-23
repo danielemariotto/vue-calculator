@@ -2,7 +2,7 @@
 Similar Result: 
 ![Result](model.jpg)
 
-actual result is on: https://uncountabledestiny.github.io/vue-calculator/
+actual result is on: [https://danielemariotto.github.io/vue-calculator/](https://danielemariotto.github.io/vue-calculator/)
 
 NEXT FEATURES
 - [x] RADICE
